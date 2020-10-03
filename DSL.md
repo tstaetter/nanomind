@@ -59,9 +59,9 @@ NanoMind.layer :layer_1 do
     # Where does the input come from?
     input from: InputStackAdapter
     # Register event handler to one or more events
-    register SomeHandler, to: :after_creation
+    register handler: SomeHandler, to: :after_creation
     # Procs/Lambdas can be registered as well
-    register Proc.new(), to: [:before_nanite_creation, :after_nanite_creation]
+    register handler: proc{}, to: [:before_nanite_creation, :after_nanite_creation]
 end
 ```
 
